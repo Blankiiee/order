@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eef2eb" />
+    <meta
+      name="description"
+      content="Білий парус — готель біля озера Світязь: номери, ціни, зручності та бронювання за адресою вул. Жовтнева, 103."
+    />
+    <title>Білий парус — готель біля Світязя</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Білий парус на головну">
+          <span class="brand-mark">✦</span>
+          <span class="brand-text">Білий <em>парус</em></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Головна навігація">
+          <a href="#rooms">Номери</a>
+          <a href="#amenities">Переваги</a>
+          <a href="#location">Розташування</a>
+          <a href="#contacts">Контакти</a>
+        </nav>
+
+        <a class="button button-outline" href="#booking">Бронювання</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Відпочинок біля Світязя</span>
+            <h1>Спокій, озеро і <span>теплі вечори</span> поруч із готелем.</h1>
+            <p>Приватна садиба «Білий парус» — це затишні номери для відпочинку, сімейних поїздок і спокійного перебування біля води. 200 м до озера, 14 номерів, комфорт, парковка та дружній сервіс.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#rooms">Огляд номерів</a>
+              <a class="button button-secondary" href="tel:+380993220042">Подзвонити</a>
+            </div>
+            <ul class="hero-meta" aria-label="Переваги готелю">
+              <li>14 номерів</li>
+              <li>2016 рік</li>
+              <li>200 м до озера</li>
+            </ul>
+          </div>
+
+          <aside class="booking-card" id="booking" aria-label="Форма бронювання">
+            <div class="booking-head">
+              <span class="eyebrow eyebrow-dark">Бронювання</span>
+              <h2>Перевірити доступність</h2>
+            </div>
+            <form class="booking-form">
+              <label>
+                <span>Заїзд</span>
+                <input type="date" value="2026-10-26" />
+              </label>
+              <label>
+                <span>Виїзд</span>
+                <input type="date" value="2026-10-27" />
+              </label>
+              <label>
+                <span>Гості</span>
+                <select>
+                  <option>2 гості</option>
+                  <option>3 гості</option>
+                  <option>4 гості</option>
+                  <option>5 гостей</option>
+                </select>
+              </label>
+              <button type="button" class="button button-primary full-width">Перевірити доступність</button>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="container stats-grid">
+          <div>
+            <strong>2.5</strong>
+            <span>Google rating</span>
+          </div>
+          <div>
+            <strong>16</strong>
+            <span>відгуків</span>
+          </div>
+          <div>
+            <strong>14</strong>
+            <span>номерів</span>
+          </div>
+          <div>
+            <strong>200 м</strong>
+            <span>до озера Світязь</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="rooms section" id="rooms">
+        <div class="container">
+          <div class="section-top">
+            <div>
+              <span class="eyebrow">Номери</span>
+              <h2>Гарний відпочинок починається з правильного номера.</h2>
+            </div>
+            <p>У садибі 14 номерів. Категорії нижче — демонстраційні: точні типи, комплектацію, ціни та наявність уточнюйте в адміністрації.</p>
+          </div>
+
+          <div class="category-tabs" role="tablist" aria-label="Категорії номерів">
+            <button class="tab is-active" type="button" data-filter="all">Усі</button>
+            <button class="tab" type="button" data-filter="double">Для пари</button>
+            <button class="tab" type="button" data-filter="family">Сімейні</button>
+            <button class="tab" type="button" data-filter="premium">Комфорт</button>
+          </div>
+
+          <div class="room-grid" id="room-grid"></div>
+        </div>
+      </section>
+
+      <section class="amenities section" id="amenities">
+        <div class="container">
+          <div class="section-top narrow">
+            <span class="eyebrow">Переваги</span>
+            <h2>Все, що важливо під час відпочинку.</h2>
+          </div>
+
+          <div class="amenity-grid">
+            <article>
+              <span class="amenity-icon">01</span>
+              <h3>Парковка</h3>
+              <p>Зручно приїжджати на авто та залишати машину поруч із номером.</p>
+            </article>
+            <article>
+              <span class="amenity-icon">02</span>
+              <h3>Wi‑Fi</h3>
+              <p>Підключення для роботи, перегляду контенту та спокійного відпочинку.</p>
+            </article>
+            <article>
+              <span class="amenity-icon">03</span>
+              <h3>Місце біля озера</h3>
+              <p>Можливість проводити вечори біля води й насолоджуватись природою.</p>
+            </article>
+            <article>
+              <span class="amenity-icon">04</span>
+              <h3>Кімнати з санвузлом</h3>
+              <p>У кожному номері є власний санвузол із душем, туалетом і умивальником.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section">
+        <div class="container about-wrap">
+          <div class="about-photo">
+            <img src="assets/white-sail-property.jpg" alt="Будинок приватної садиби Білий парус у Світязі" loading="lazy" />
+          </div>
+          <div class="about-copy">
+            <span class="eyebrow">Про готель</span>
+            <h2>Спокійний відпочинок у приватній садибі.</h2>
+            <p>«Білий парус» — це не велика готельна мережа, а невелика, затишна садиба для людей, які цінують природну атмосферу й комфорт, без зайвого шуму. Це ідеальний варіант для тих, хто хоче південно-західного спокою поблизу озера.</p>
+            <div class="about-points">
+              <div><strong>2016</strong><span>р. побудови</span></div>
+              <div><strong>14</strong><span>номерів</span></div>
+              <div><strong>200 м</strong><span>до води</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="location section" id="location">
+        <div class="container location-wrap">
+          <div class="location-copy">
+            <span class="eyebrow">Розташування</span>
+            <h2>Поруч із озером і в центрі відпочинку.</h2>
+            <p>Адреса: вул. Жовтнева, 103, Світязь, Волинська область, 44021.</p>
+            <ul>
+              <li>200 м до озера Світязь</li>
+              <li>100 м до магазину та автобусної зупинки</li>
+              <li>300 м до ринку</li>
+            </ul>
+            <a class="button button-primary" href="https://maps.app.goo.gl/qQb3GiBgd3q2ff4c6" target="_blank" rel="noreferrer">Прокласти маршрут</a>
+          </div>
+
+          <div class="map-card">
+            <div class="map-art" aria-hidden="true">
+              <div class="map-water"></div>
+              <div class="map-road road-one"></div>
+              <div class="map-road road-two"></div>
+              <div class="map-road road-three"></div>
+              <div class="map-label map-label-1">Світязь</div>
+              <div class="map-label map-label-2">Озеро</div>
+              <div class="map-pin">✦</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts section" id="contacts">
+        <div class="container contacts-wrap">
+          <div>
+            <span class="eyebrow">Контакти</span>
+            <h2>Зв’яжіться з адміністрацією.</h2>
+          </div>
+          <div class="contact-boxes">
+            <a class="contact-card" href="tel:+380993220042">
+              <span>Телефон</span>
+              <strong>+38 (099) 322 0042</strong>
+            </a>
+            <div class="contact-card">
+              <span>Адреса</span>
+              <strong>вул. Жовтнева, 103</strong>
+            </div>
+            <div class="contact-card">
+              <span>Тип</span>
+              <strong>Приватна садиба / готель</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div class="brand footer-brand">
+          <span class="brand-mark">✦</span>
+          <span class="brand-text">Білий <em>парус</em></span>
+        </div>
+        <p>Затишний відпочинок у Світязі.</p>
+        <a href="#top">Нагору ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
